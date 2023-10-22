@@ -14,7 +14,7 @@ const MainNavbar = () => {
       <MaxWidthWrapper>
         <div className="flex h-14 items-center justify-between border-b border-border">
           <Link href="/" className="flex z-40 font-semibold">
-            <span>quill.</span>
+            <span>Alonica</span>
           </Link>
         </div>
       </MaxWidthWrapper>
