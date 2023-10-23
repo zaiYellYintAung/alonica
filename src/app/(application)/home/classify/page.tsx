@@ -1,3 +1,11 @@
+"use client";
+import ClassificationForm from "./_components/ClassificationForm";
+
 export default function ClassifyPage() {
-  return <main>ClassifyPage</main>;
+  return (
+    <main>
+      {" "}
+      <ClassificationForm />
+    </main>
+  );
 }

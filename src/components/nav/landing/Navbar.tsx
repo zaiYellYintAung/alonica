@@ -8,6 +8,7 @@ import { MaxWidthWrapper } from "@/components/ui/wrapper";
 
 import MobileNavbar from "./MobileNavbar";
 import UserAccount from "./UserAccount";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
 
 const Navbar = () => {
   const user = "";
@@ -23,46 +24,23 @@ const Navbar = () => {
           <MobileNavbar isAuth={!!user} />
 
           <div className="hidden items-center space-x-4 sm:flex">
-            {!user ? (
-              <>
-                <Link
-                  href="/pricing"
-                  className={buttonVariants({
-                    variant: "ghost",
-                    size: "sm",
-                  })}>
-                  Pricing
-                </Link>
-                <Link
-                  href="/"
-                  className={buttonVariants({
-                    variant: "ghost",
-                    size: "sm",
-                  })}>
-                  Sign in
-                </Link>
-                <Link
-                  href="/"
-                  className={buttonVariants({
-                    size: "sm",
-                  })}>
-                  Get started <ArrowRight className="ml-1.5 h-5 w-5" />
-                </Link>
-              </>
-            ) : (
-              <>
-                <Link
-                  href="/dashboard"
-                  className={buttonVariants({
-                    variant: "ghost",
-                    size: "sm",
-                  })}>
-                  Dashboard
-                </Link>
+            <Link
+              href="/pricing"
+              className={buttonVariants({
+                variant: "ghost",
+                size: "sm",
+              })}>
+              Pricing
+            </Link>
+            <ThemeToggle />
 
-                <UserAccount name="Your Account" email={""} imageUrl={""} />
-              </>
-            )}
+            <Link
+              href="/"
+              className={buttonVariants({
+                size: "sm",
+              })}>
+              Login <ArrowRight className="ml-1.5 h-5 w-5" />
+            </Link>
           </div>
         </div>
       </MaxWidthWrapper>
