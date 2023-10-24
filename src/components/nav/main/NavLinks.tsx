@@ -14,11 +14,11 @@ import { usePathname } from "next/navigation";
 
 export const mainLinks = [
   { name: "Home", route: "/home", icon: Home },
-  { name: "Text to Dwg", route: "/home/text-to-dwg", icon: FileText },
-  { name: "Draw", route: "/home/draw", icon: Pencil },
+  { name: "Text to Dwg", route: "/text-to-dwg", icon: FileText },
+  { name: "Draw", route: "/draw", icon: Pencil },
   { name: "Find Builders", route: "/builders", icon: Construction },
-  { name: "Interior Design", route: "/home/interior", icon: Sofa },
-  { name: "Estimate", route: "/home/estimate", icon: Calculator },
+  { name: "Interior Design", route: "/interior", icon: Sofa },
+  { name: "Estimate", route: "/estimate", icon: Calculator },
   { name: "Settings", route: "/settings", icon: Settings },
 ];
 
