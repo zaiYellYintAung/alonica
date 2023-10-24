@@ -11,7 +11,7 @@ export default function ApplicationLayout({
     <>
       <div className="min-h-screen">
         <MainNavbar />
-        <MaxWidthWrapper className="h-full pt-4">{children}</MaxWidthWrapper>
+        <div className="h-full pt-4">{children}</div>
       </div>
     </>
   );
