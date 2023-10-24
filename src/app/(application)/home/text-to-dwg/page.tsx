@@ -2,10 +2,11 @@ export default function TextToDwgPage() {
   return (
     <>
       <div className="flex gap-6">
-        <main className="w-full h-[600px] border rounded-md p-4">
+        <div className="w-[700px] h-[600px] border rounded-sm">
           Text to Drawing Section
-        </main>
-        <div className="w-64 h-full">Sidebar</div>
+        </div>
+
+        <div className="border rounded-sm lg:min-w-[200px] xl:min-w-[400px]"></div>
       </div>
     </>
   );

@@ -1,3 +1,9 @@
+import { SheetDemo } from "@/components/application/FormSheet";
+
 export default function HomePage() {
-  return <main>HomePage</main>;
+  return (
+    <main>
+      <SheetDemo />
+    </main>
+  );
 }

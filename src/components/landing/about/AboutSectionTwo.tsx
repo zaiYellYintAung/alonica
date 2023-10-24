@@ -3,8 +3,8 @@ import { Button } from "@/components/ui/button";
 const AboutSectionTwo = () => {
   return (
     <div className="flex items-center py-0 md:py-20">
-      <div className="flex gap-8 md:gap-12  py-8 flex-col md:flex-row-reverse items-center">
-        <section className="w-full md:w-1/2 space-y-5 ">
+      <div className="flex gap-8 lg:gap-12  py-8 flex-col lg:flex-row-reverse items-center">
+        <section className="w-full lg:w-auto space-y-5 mb-4 md:mb-8 lg:mb-0">
           <h1 className="text-3xl md:text-4xl font-bold md:leading-[3rem]">
             Lorem ipsum dolor sit amet consectetur adipisicing elit adipisicing
             elit .
@@ -23,9 +23,9 @@ const AboutSectionTwo = () => {
           </div>
         </section>
 
-        <section className="w-full md:w-1/2">
-          <div className="h-[400px] md:h-[480px] w-full flex items-center justify-center ">
-            <div className="w-[450px] h-[450px] rounded-md bg-primary"></div>
+        <section className="w-full lg:w-1/2">
+          <div className="h-[400px] lg:h-[480px] w-full flex items-center justify-center ">
+            <div className="w-full lg:w-[450px] h-[450px] rounded-md bg-primary"></div>
           </div>
         </section>
       </div>

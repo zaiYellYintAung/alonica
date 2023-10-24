@@ -1,5 +1,6 @@
 import AboutSectionOne from "@/components/landing/about/AboutSectionOne";
 import AboutSectionTwo from "@/components/landing/about/AboutSectionTwo";
+import FeatureSection from "@/components/landing/feature/FeatureSection";
 import HeroSection from "@/components/landing/hero/HeroSection";
 import IntroSection from "@/components/landing/intro/IntroSection";
 import PricingSection from "@/components/landing/pricing/PricingSection";
@@ -14,7 +15,9 @@ export default function Home() {
       <AboutSectionOne />
       <AboutSectionTwo />
       <ServiceSection />
-      <PricingSection />
+      <AboutSectionTwo />
+      <AboutSectionOne />
+      <FeatureSection />
     </div>
   );
 }
