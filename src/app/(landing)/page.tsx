@@ -6,7 +6,9 @@ import FeatureSectionTwo from "@/components/landing/feature/FeatureSectionTwo";
 import HeroSection from "@/components/landing/hero/HeroSection";
 import IntroSection from "@/components/landing/intro/IntroSection";
 import PricingSection from "@/components/landing/pricing/PricingSection";
+import ServiceNewSection from "@/components/landing/services/ServiceNewSection";
 import ServiceSection from "@/components/landing/services/ServiceSection";
+import TestimonialSection from "@/components/landing/testimonial/TestimonialSection";
 import { Button } from "@/components/ui/button";
 
 export default function Home() {
@@ -14,15 +16,14 @@ export default function Home() {
     <div className="space-y-4">
       <HeroSection />
       <IntroSection />
-      <AboutSectionOne />
-      <AboutSectionTwo />
+      <ServiceNewSection />
+      <FeatureSectionTwo />
       <AboutSectionThree />
       <ServiceSection />
-
       <AboutSectionTwo />
       <AboutSectionOne />
-      <FeatureSection />
-      <FeatureSectionTwo />
+
+      {/* <FeatureSection /> */}
     </div>
   );
 }

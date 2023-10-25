@@ -3,7 +3,7 @@ import { FeatureGraphicTwo } from "./graphic-two";
 const FeatureSectionTwo = () => {
   return (
     <div className="flex items-center py-0 md:py-20">
-      <div className="flex gap-8 md:gap-12  py-8 flex-col lg:flex-row-reverse items-center">
+      <div className="flex gap-8 md:gap-12  py-8 flex-col lg:flex-row items-center">
         <section className="w-full md:w-auto space-y-5 ">
           <h1 className="text-3xl md:text-5xl font-bold md:leading-[3.5rem] xl:max-w-[350px] text-center lg:text-left">
             Power of Generative Ai

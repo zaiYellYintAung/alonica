@@ -22,9 +22,20 @@ const ServiceSection = () => {
   };
 
   return (
-    <div className="">
+    <div className="space-y-12">
       {/* {open && <ServiceModal item={service} close={handleClose} />} */}
-      <header>Header</header>
+      <header className="w-full text-center space-y-6 ">
+        <h2 className="text-3xl font-semibold">
+          Loved by businesses worldwide.
+        </h2>
+        <div className="flex justify-center">
+          <p className="max-w-2xl">
+            Our software is so simple that people can’t help but fall in love
+            with it. Simplicity is easy when you just skip tons of
+            mission-critical features.
+          </p>
+        </div>
+      </header>
       <div className="flex justify-center w-full">
         <main className="grid grid-cols-2 lg:grid-cols-4 w-[1200px] gap-3 md:gap-6">
           {data.services.map((item, index) => (
