@@ -27,7 +27,7 @@ const ViewBox: FC<Props> = () => {
   }, []);
 
   return (
-    <div className="hidden xl:block w-[200px] h-full rounded-md space-y-2">
+    <div className="hidden xl:block w-[200px] h-full rounded-md space-y-2 flex-shrink-0">
       <h1 className="text-sm font-semibold pl-3 mb-2">{title}</h1>
       {datas.map((link, index) => (
         <div key={index}>

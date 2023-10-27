@@ -4,12 +4,12 @@ export const settingSidebarNavItems = [
     href: "/settings",
   },
   {
-    title: "Account",
-    href: "/settings/account",
+    title: "Notifications",
+    href: "/settings/noti",
   },
   {
-    title: "Appearance",
-    href: "/settings/appearance",
+    title: "Subscriptions",
+    href: "/settings/pricing-plan",
   },
   {
     title: "Notifications",

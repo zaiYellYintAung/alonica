@@ -1,6 +1,5 @@
 import ViewBox from "@/components/application/ViewBox";
 import { ReactNode } from "react";
-import { routeData, viewTitle } from "./constants";
 
 export default async function InteriorLayout({
   children,
