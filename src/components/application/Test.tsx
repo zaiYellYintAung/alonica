@@ -2,7 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+// import { usePathname } from "next/navigation";
 import { FC } from "react";
 export interface LinkType {
   name: string;
@@ -15,8 +15,8 @@ interface Props {
   item: LinkType;
 }
 
-const UnicornRoute: FC<Props> = ({ item }) => {
-  const pathname = usePathname();
+const Test: FC<Props> = ({ item }) => {
+  // const pathname = usePathname();
 
   return (
     <>
@@ -24,7 +24,7 @@ const UnicornRoute: FC<Props> = ({ item }) => {
         <span
           className={cn(
             "group flex items-center rounded-md px-3 py-2 text-sm font-medium hover:bg-accent hover:text-accent-foreground",
-            pathname === item.route ? "bg-accent" : "transparent text-gray-500",
+            null === item.route ? "bg-accent" : "transparent text-gray-500",
             item.disabled && "cursor-not-allowed opacity-80"
           )}>
           <item.icon className="mr-2 h-4 w-4" />
@@ -35,4 +35,4 @@ const UnicornRoute: FC<Props> = ({ item }) => {
   );
 };
 
-export default UnicornRoute;
+export default Test;

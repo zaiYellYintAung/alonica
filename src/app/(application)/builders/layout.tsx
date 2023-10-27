@@ -1,7 +1,8 @@
 import ViewBox from "@/components/application/ViewBox";
 import { ReactNode } from "react";
+import { routeData, viewTitle } from "./constants";
 
-export default async function TextToDrawingLayout({
+export default async function BuildersLayout({
   children,
 }: {
   children: ReactNode;
@@ -9,7 +10,7 @@ export default async function TextToDrawingLayout({
   return (
     <>
       <div className="flex gap-6">
-        <ViewBox />
+        {/* <ViewBox /> */}
         <div>{children}</div>
       </div>
     </>

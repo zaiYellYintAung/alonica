@@ -1,7 +1,8 @@
 import ViewBox from "@/components/application/ViewBox";
 import { ReactNode } from "react";
+import { routeData, viewTitle } from "./constants";
 
-export default async function TextToDrawingLayout({
+export default async function ReviewLayout({
   children,
 }: {
   children: ReactNode;

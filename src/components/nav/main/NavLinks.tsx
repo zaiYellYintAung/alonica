@@ -24,6 +24,7 @@ export const mainLinks = [
 
 const NavLinks = () => {
   const pathname = usePathname();
+  const rootPathname = pathname.split("/")[1];
 
   return (
     <>
@@ -32,7 +33,7 @@ const NavLinks = () => {
           <Link
             href={link.route}
             className={`flex py-1.5 px-3 rounded-xl text-sm space-x-3 items-center ${
-              link.route === pathname
+              link.route === `/${rootPathname}`
                 ? "border border-primary/30 text-primary bg-primary/10"
                 : "text-gray-500"
             }`}>
