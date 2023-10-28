@@ -1,3 +1,14 @@
+import { PageHeader } from "@/components/ui/page-header";
+
 export default function RenderPage() {
-  return <div>Render Page</div>;
+  return (
+    <>
+      <PageHeader
+        title={"Generate Drawing"}
+        subTitle={
+          "Generate your floor plan within seconds using the power of Ai"
+        }
+      />
+    </>
+  );
 }

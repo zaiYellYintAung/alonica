@@ -1,16 +1,14 @@
-"use client";
-
-import UnicornBoard from "@/components/application/UnicornBoard";
-import ViewBox from "@/components/application/ViewBox";
-import DrawingForm from "./_components/DrawingForm";
-import DrawingBoard from "@/components/application/DrawingBoard";
+import { PageHeader } from "@/components/ui/page-header";
 
 export default function DrawingPage() {
   return (
     <>
-      <div className="flex gap-6">
-        <DrawingBoard />
-      </div>
+      <PageHeader
+        title={"Generate Drawing"}
+        subTitle={
+          "Generate your floor plan within seconds using the power of Ai"
+        }
+      />
     </>
   );
 }

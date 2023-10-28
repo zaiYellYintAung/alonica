@@ -29,12 +29,12 @@ const RightClick: FC<Props> = ({ children }) => {
             Back
             <ContextMenuShortcut>⌘[</ContextMenuShortcut>
           </ContextMenuItem>
-          <ContextMenuItem inset disabled>
-            Forward
+          <ContextMenuItem inset>
+            Save
             <ContextMenuShortcut>⌘]</ContextMenuShortcut>
           </ContextMenuItem>
           <ContextMenuItem inset>
-            Reload
+            Copy
             <ContextMenuShortcut>⌘R</ContextMenuShortcut>
           </ContextMenuItem>
           <ContextMenuSub>

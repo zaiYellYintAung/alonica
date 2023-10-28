@@ -1,7 +1,5 @@
 import ViewBox from "@/components/application/ViewBox";
 import { ReactNode } from "react";
-import { routeData, viewTitle } from "./constants";
-
 export default async function ReviewLayout({
   children,
 }: {
@@ -9,9 +7,9 @@ export default async function ReviewLayout({
 }) {
   return (
     <>
-      <div className="flex gap-6">
+      <div className="flex gap-6 w-full">
         <ViewBox />
-        <div>{children}</div>
+        <div className="w-full">{children}</div>
       </div>
     </>
   );
