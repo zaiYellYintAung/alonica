@@ -1,3 +1,0 @@
-const optionInitialData = {
-  prompt: "",
-};

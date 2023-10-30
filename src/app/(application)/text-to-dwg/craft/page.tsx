@@ -5,16 +5,20 @@ import VisionaryBoard from "@/components/application/VisionaryBoard";
 import { useState } from "react";
 import MagicForm from "../_components/forms/MagicForm";
 import { Button } from "@/components/ui/button";
+import { MagicFormType } from "../_components/forms/constants";
 
 export default function NewGenerateDrawingPage() {
-  const [unicorn, setUnicorn] = useState(false);
+  const [unicorn, setUnicorn] = useState<string[]>([]);
   const loading = false;
+
+  const handleSubmit = (data: MagicFormType) => {};
+
   return (
     <div className="flex gap-6">
       <section>
-        {unicorn ? (
+        {unicorn.length ? (
           <main>
-            <UnicornBoard />
+            <UnicornBoard unicorns={unicorn} />
           </main>
         ) : (
           <main>
@@ -46,7 +50,7 @@ export default function NewGenerateDrawingPage() {
       </section>
 
       <section>
-        <MagicForm />
+        <MagicForm handleSubmit={handleSubmit} />
       </section>
     </div>
   );

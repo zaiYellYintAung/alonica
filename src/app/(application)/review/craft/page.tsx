@@ -2,25 +2,61 @@
 
 import UnicornBoard from "@/components/application/UnicornBoard";
 import VisionaryBoard from "@/components/application/VisionaryBoard";
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 import ReviewForm from "../_components/forms/ReviewForm";
 import { Button } from "@/components/ui/button";
 import ImageUpload from "@/components/ui/image-upload";
 import Image from "next/image";
 import { Trash } from "lucide-react";
+import { ReviewOptionType } from "../_components/forms/constants";
+import { useToast } from "@/components/ui/use-toast";
+import axios from "axios";
+import { getBackendUrl, tokenHeader } from "@/lib/url";
 
 export default function NewReviewPage() {
-  const [unicorn, setUnicorn] = useState(false);
+  const [unicorn, setUnicorn] = useState<string[]>([]);
+  const [loading, setLoading] = useState(false);
+  const { toast } = useToast();
+
   const [imageUrl, setImageUrl] = useState(
     "https://res.cloudinary.com/dh5ltkcj1/image/upload/v1698662064/ubcbcib0jdfgooku1zsq.jpg"
   );
-  const loading = false;
+
+  const handleSubmit = async (options: ReviewOptionType) => {
+    try {
+      setLoading(true);
+      const requestData = { imageUrl, options };
+
+      console.log(requestData);
+      console.log(getBackendUrl("/review"));
+      console.log(tokenHeader);
+
+      const response = await axios.post(
+        getBackendUrl("/review/"),
+        requestData,
+        tokenHeader
+      );
+
+      const images = response.data.unicorns;
+
+      images && setUnicorn(images);
+    } catch (error) {
+      console.log("err -->", error);
+      toast({
+        title: "Something Went Wrong",
+        description: "Please try again or please contact us",
+      });
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <div className="flex gap-6">
       <section>
-        {unicorn ? (
+        {unicorn.length ? (
           <main>
-            <UnicornBoard />
+            <UnicornBoard unicorns={unicorn} />
           </main>
         ) : (
           <main>
@@ -85,7 +121,7 @@ export default function NewReviewPage() {
       </section>
 
       <section>
-        <ReviewForm />
+        <ReviewForm handleSubmit={handleSubmit} loading={loading} />
       </section>
     </div>
   );

@@ -1,11 +1,15 @@
-import React from "react";
+import React, { FC } from "react";
 import RightClick from "./RightClick";
 
-const UnicornBoard = () => {
+interface Props {
+  unicorns: string[];
+}
+
+const UnicornBoard: FC<Props> = () => {
   return (
     <div>
       <RightClick>
-        <div className="w-[680px] h-[680px] border rounded-sm p-4 flex-shrink-0 border-dashed">
+        <div className="w-[680px] h-[680px] border rounded-lg p-4 flex-shrink-0">
           Unicorn Board
         </div>
       </RightClick>

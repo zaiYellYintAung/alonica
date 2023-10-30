@@ -7,14 +7,14 @@ import RedrawForm from "../_components/forms/RedrawForm";
 import { Button } from "@/components/ui/button";
 
 export default function NewReDrawPage() {
-  const [unicorn, setUnicorn] = useState(false);
+  const [unicorn, setUnicorn] = useState<string[]>([]);
   const loading = false;
   return (
     <div className="flex gap-6">
       <section>
-        {unicorn ? (
+        {unicorn.length ? (
           <main>
-            <UnicornBoard />
+            <UnicornBoard unicorns={unicorn} />
           </main>
         ) : (
           <main>

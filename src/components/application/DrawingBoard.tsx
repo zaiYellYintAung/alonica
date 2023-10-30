@@ -32,15 +32,16 @@ function DrawingBoard() {
   };
 
   return (
-    <canvas
-      ref={canvasRef}
-      width={800}
-      height={600}
-      style={{ border: "1px solid black" }}
-      onMouseDown={startDrawing}
-      onMouseUp={endDrawing}
-      onMouseMove={draw}
-    />
+    <div className="border rounded-lg bg-white">
+      <canvas
+        ref={canvasRef}
+        width={680}
+        height={680}
+        onMouseDown={startDrawing}
+        onMouseUp={endDrawing}
+        onMouseMove={draw}
+      />
+    </div>
   );
 }
 

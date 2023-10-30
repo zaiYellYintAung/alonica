@@ -4,8 +4,8 @@ export const formSchema = z.object({
   prompt: z.string().min(1),
 });
 
-export type ReviewOptionType = z.infer<typeof formSchema>;
+export type MagicFormType = z.infer<typeof formSchema>;
 
-export const initialOptionData = {
+export const initialFormData = {
   prompt: "",
 };

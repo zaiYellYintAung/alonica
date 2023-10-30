@@ -7,14 +7,14 @@ import InteriorForm from "../_components/forms/InteriorForm";
 import { Button } from "@/components/ui/button";
 
 export default function NewInteriorPage() {
-  const [unicorn, setUnicorn] = useState(false);
+  const [unicorn, setUnicorn] = useState([]);
   const loading = false;
   return (
     <div className="flex gap-6">
       <section>
-        {unicorn ? (
+        {unicorn.length ? (
           <main>
-            <UnicornBoard />
+            <UnicornBoard unicorns={unicorn} />
           </main>
         ) : (
           <main>
