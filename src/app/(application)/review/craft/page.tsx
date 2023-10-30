@@ -5,9 +5,15 @@ import VisionaryBoard from "@/components/application/VisionaryBoard";
 import { useState } from "react";
 import ReviewForm from "../_components/forms/ReviewForm";
 import { Button } from "@/components/ui/button";
+import ImageUpload from "@/components/ui/image-upload";
+import Image from "next/image";
+import { Trash } from "lucide-react";
 
 export default function NewReviewPage() {
   const [unicorn, setUnicorn] = useState(false);
+  const [imageUrl, setImageUrl] = useState(
+    "https://res.cloudinary.com/dh5ltkcj1/image/upload/v1698662064/ubcbcib0jdfgooku1zsq.jpg"
+  );
   const loading = false;
   return (
     <div className="flex gap-6">
@@ -19,27 +25,60 @@ export default function NewReviewPage() {
         ) : (
           <main>
             <VisionaryBoard loading={loading}>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                className="h-10 w-10 text-muted-foreground"
-                viewBox="0 0 24 24">
-                <circle cx="12" cy="11" r="1" />
-                <path d="M11 17a1 1 0 0 1 2 0c0 .5-.34 3-.5 4.5a.5.5 0 0 1-1 0c-.16-1.5-.5-4-.5-4.5ZM8 14a5 5 0 1 1 8 0" />
-                <path d="M17 18.5a9 9 0 1 0-10 0" />
-              </svg>
+              {imageUrl ? (
+                <>
+                  <div
+                    key={imageUrl}
+                    className="relative w-[600px] h-[600px] rounded-md overflow-hidden">
+                    <div className="z-10 absolute top-2 right-2">
+                      <Button
+                        type="button"
+                        onClick={() => setImageUrl("")}
+                        variant="destructive"
+                        size="icon">
+                        <Trash className="h-4 w-4" />
+                      </Button>
+                    </div>
+                    <Image
+                      fill
+                      className="object-cover"
+                      alt="Image"
+                      src={imageUrl}
+                    />
+                  </div>
+                </>
+              ) : (
+                <>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    className="h-10 w-10 text-muted-foreground"
+                    viewBox="0 0 24 24">
+                    <circle cx="12" cy="11" r="1" />
+                    <path d="M11 17a1 1 0 0 1 2 0c0 .5-.34 3-.5 4.5a.5.5 0 0 1-1 0c-.16-1.5-.5-4-.5-4.5ZM8 14a5 5 0 1 1 8 0" />
+                    <path d="M17 18.5a9 9 0 1 0-10 0" />
+                  </svg>
 
-              <h3 className="mt-4 text-lg font-semibold">
-                Property Descriptions
-              </h3>
-              <p className="mb-4 mt-2 text-sm text-muted-foreground">
-                Generate the property description using Ai
-              </p>
-              <Button className="relative">Start Generating</Button>
+                  <h3 className="mt-4 text-lg font-semibold">
+                    Property Descriptions
+                  </h3>
+                  <p className="mb-4 mt-2 text-sm text-muted-foreground">
+                    Generate the property description using Ai
+                  </p>
+                  <ImageUpload
+                    value={imageUrl ? [""] : []}
+                    disabled={loading}
+                    onChange={(url) => {
+                      setImageUrl(url);
+                    }}
+                    onRemove={() => {}}
+                  />
+                </>
+              )}
             </VisionaryBoard>
           </main>
         )}

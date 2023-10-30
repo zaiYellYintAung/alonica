@@ -36,7 +36,7 @@ const ImageUpload: React.FC<ImageUploadProps> = ({
 
   return (
     <div>
-      <div className="mb-4 flex items-center gap-4">
+      {/* <div className="mb-4 flex items-center gap-4">
         {value.map((url) => (
           <div
             key={url}
@@ -53,7 +53,7 @@ const ImageUpload: React.FC<ImageUploadProps> = ({
             <Image fill className="object-cover" alt="Image" src={url} />
           </div>
         ))}
-      </div>
+      </div> */}
       <CldUploadWidget onUpload={onUpload} uploadPreset="bcd2wuqd">
         {({ open }) => {
           const onClick = () => {
@@ -67,7 +67,7 @@ const ImageUpload: React.FC<ImageUploadProps> = ({
               variant="secondary"
               onClick={onClick}>
               <ImagePlus className="h-4 w-4 mr-2" />
-              Upload an Image
+              Upload Image
             </Button>
           );
         }}
