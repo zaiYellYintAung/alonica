@@ -9,7 +9,7 @@ import { MagicFormType } from "../_components/forms/constants";
 
 export default function NewGenerateDrawingPage() {
   const [unicorn, setUnicorn] = useState<string[]>([]);
-  const loading = false;
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = (data: MagicFormType) => {};
 
@@ -50,7 +50,7 @@ export default function NewGenerateDrawingPage() {
       </section>
 
       <section>
-        <MagicForm handleSubmit={handleSubmit} />
+        <MagicForm handleSubmit={handleSubmit} loading={loading} />
       </section>
     </div>
   );

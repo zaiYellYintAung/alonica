@@ -17,10 +17,11 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 
 interface Props {
+  loading: boolean;
   handleSubmit: (data: MagicFormType) => void;
 }
 
-const MagicForm: FC<Props> = ({ handleSubmit }) => {
+const MagicForm: FC<Props> = ({ handleSubmit, loading }) => {
   const form = useForm<MagicFormType>({
     resolver: zodResolver(formSchema),
     defaultValues: initialFormData,

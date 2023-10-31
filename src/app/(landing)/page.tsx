@@ -13,13 +13,12 @@ import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
-    <div className="space-y-4">
+    <div className="space-y-16">
       <HeroSection />
       <IntroSection />
-      <ServiceNewSection />
       <FeatureSectionTwo />
       <AboutSectionThree />
-      <ServiceSection />
+      <ServiceNewSection />
       <AboutSectionTwo />
       <AboutSectionOne />
 
