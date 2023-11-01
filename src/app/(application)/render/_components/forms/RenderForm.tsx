@@ -43,7 +43,7 @@ const RenderForm: FC<Props> = ({ handleSubmit, loading }) => {
   };
 
   return (
-    <div className="xl:w-full">
+    <div className="xl:w-full mt-2">
       <Form {...form}>
         <form onSubmit={handleClick} className="w-full space-y-5">
           <FormItem>

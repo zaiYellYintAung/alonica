@@ -9,10 +9,10 @@ export default function ApplicationLayout({
 }) {
   return (
     <>
-      <div className="min-h-screen ">
+      <div className="min-h-screen">
         <MainNavbar />
-        <div className="h-full px-14">
-          <div className="w-full h-full px-4 pt-4">{children}</div>
+        <div className="h-full px-16">
+          <div className="w-full h-full px-4 pt-5">{children}</div>
         </div>
       </div>
     </>

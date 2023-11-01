@@ -25,15 +25,9 @@ export default function NewRenderPage() {
       setLoading(true);
       const requestData = { imageUrl, options };
 
-      console.log(requestData);
-      console.log(getBackendUrl("/Render"));
-      console.log(tokenHeader);
+      window.alert("yo");
 
-      const response = await axios.post(
-        getBackendUrl("/Render/"),
-        requestData,
-        tokenHeader
-      );
+      const response = await axios.post("/api/render", requestData);
 
       const images = response.data.unicorns;
 

@@ -23,7 +23,7 @@ const UnicornRoute: FC<Props> = ({ item }) => {
       <Link href={item.disabled ? "/" : item.route} className="block">
         <span
           className={cn(
-            "group flex items-center rounded-md px-3 py-2 text-sm font-medium hover:bg-accent hover:text-accent-foreground",
+            "group flex items-center rounded-md px-4 py-2.5 text-sm font-medium hover:bg-accent hover:text-accent-foreground",
             pathname === item.route ? "bg-accent" : "transparent text-gray-500",
             item.disabled && "cursor-not-allowed opacity-80"
           )}>

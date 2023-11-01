@@ -3,7 +3,7 @@ import { History, LayoutDashboard, Pencil, SparklesIcon } from "lucide-react";
 export const routeDatas = [
   {
     routeName: "text-to-dwg",
-    viewTitle: "",
+    viewTitle: "Text to DWG",
     data: [
       {
         name: "Dashboard",
@@ -27,7 +27,7 @@ export const routeDatas = [
   },
   {
     routeName: "draw",
-    viewTitle: "",
+    viewTitle: "Draw",
     data: [
       {
         name: "Dashboard",
@@ -51,7 +51,7 @@ export const routeDatas = [
   },
   {
     routeName: "estimate",
-    viewTitle: "",
+    viewTitle: "Estimate",
     data: [
       {
         name: "Dashboard",
@@ -75,7 +75,7 @@ export const routeDatas = [
   },
   {
     routeName: "interior",
-    viewTitle: "",
+    viewTitle: "Interior",
     data: [
       {
         name: "Dashboard",
@@ -99,7 +99,7 @@ export const routeDatas = [
   },
   {
     routeName: "redraw",
-    viewTitle: "",
+    viewTitle: "Redraw",
     data: [
       {
         name: "Dashboard",
@@ -123,7 +123,7 @@ export const routeDatas = [
   },
   {
     routeName: "render",
-    viewTitle: "",
+    viewTitle: "Render",
     data: [
       {
         name: "Dashboard",
@@ -147,7 +147,7 @@ export const routeDatas = [
   },
   {
     routeName: "review",
-    viewTitle: "",
+    viewTitle: "Review",
     data: [
       {
         name: "Dashboard",
