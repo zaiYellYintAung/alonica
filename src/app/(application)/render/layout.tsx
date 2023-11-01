@@ -8,7 +8,7 @@ export default async function RenderLayout({
 }) {
   return (
     <>
-      <div className="flex gap-6 w-full">
+      <div className="flex gap-12 w-full">
         <ViewBox />
         <div className="w-full">{children}</div>
       </div>

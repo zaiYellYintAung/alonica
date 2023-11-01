@@ -15,6 +15,7 @@ import {
   BrainCircuit,
   BookCheck,
   Paintbrush,
+  Box,
 } from "lucide-react";
 import { usePathname } from "next/navigation";
 
@@ -25,7 +26,7 @@ export const mainLinks = [
   { name: "Redraw", route: "/redraw", icon: Paintbrush },
   { name: "Review", route: "/review", icon: BookCheck },
   { name: "Interior", route: "/interior", icon: Sofa },
-  { name: "Estimate", route: "/estimate", icon: Calculator },
+  { name: "Render", route: "/render", icon: Box },
   { name: "Settings", route: "/settings", icon: Settings },
 ];
 

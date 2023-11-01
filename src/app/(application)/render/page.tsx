@@ -9,6 +9,7 @@ export default function RenderPage() {
           "Generate your floor plan within seconds using the power of Ai"
         }
       />
+      <div>{process.env.API_TOKEN}</div>
     </>
   );
 }

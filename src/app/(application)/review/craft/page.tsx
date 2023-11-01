@@ -11,7 +11,7 @@ import { Trash } from "lucide-react";
 import { ReviewOptionType } from "../_components/forms/constants";
 import { useToast } from "@/components/ui/use-toast";
 import axios from "axios";
-import { getBackendUrl, tokenHeader } from "@/lib/url";
+import { getBackendUrl, tokenHeader } from "@/lib/memo";
 
 export default function NewReviewPage() {
   const [unicorn, setUnicorn] = useState<string[]>([]);

@@ -54,7 +54,7 @@ const AboutSectionThree = () => {
         </section>
         <section className="w-full lg:w-1/2">
           <div className="h-[400px] lg:h-[480px] w-full flex items-center justify-center ">
-            <div className="w-full lg:w-[450px] h-[450px] rounded-md bg-primary"></div>
+            <div className="w-full lg:w-[450px] h-[450px] xl:w-[500px] xl:h-[500px] rounded-md bg-primary"></div>
           </div>
         </section>
       </div>
