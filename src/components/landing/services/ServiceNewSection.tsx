@@ -2,7 +2,7 @@ import { groupOne, groupTwo, groupThree, groupFour } from "./constant";
 
 const ServiceNewSection = () => {
   return (
-    <div className="space-y-12">
+    <div className="space-y-12 w-full">
       <header className="w-full text-center space-y-6 ">
         <h2 className="text-3xl font-semibold">
           Loved by businesses worldwide.
@@ -15,7 +15,7 @@ const ServiceNewSection = () => {
           </p>
         </div>
       </header>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 max-w-6xl mx-auto gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
         <div className="space-y-6">
           {groupOne.map((item, index) => (
             <div key={index}>

@@ -9,14 +9,15 @@ import { MaxWidthWrapper } from "@/components/ui/wrapper";
 import MobileNavbar from "./MobileNavbar";
 import UserAccount from "./UserAccount";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
+import { cn } from "@/lib/utils";
 
 const Navbar = () => {
   const user = "";
 
   return (
-    <nav className="sticky h-14 inset-x-0 top-0 z-30 w-full border-b border-border bg-background/75 backdrop-blur-lg transition-all">
+    <nav className="sticky h-[60px] inset-x-0 top-0 z-30 w-full border-b border-border bg-background/75 backdrop-blur-lg transition-all">
       <MaxWidthWrapper>
-        <div className="flex h-14 items-center justify-between border-b border-border">
+        <div className="flex h-[60px] items-center justify-between border-b border-border">
           <Link href="/" className="flex z-40 font-semibold">
             <span>Alonica</span>
           </Link>
@@ -28,18 +29,13 @@ const Navbar = () => {
               href="/pricing"
               className={buttonVariants({
                 variant: "ghost",
-                size: "sm",
               })}>
               Pricing
             </Link>
             <ThemeToggle />
 
-            <Link
-              href="/"
-              className={buttonVariants({
-                size: "sm",
-              })}>
-              Login <ArrowRight className="ml-1.5 h-5 w-5" />
+            <Link href="/" className={cn("block", buttonVariants({}))}>
+              Sign In
             </Link>
           </div>
         </div>
