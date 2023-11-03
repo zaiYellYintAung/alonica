@@ -12,6 +12,7 @@ import PricingSection from "@/components/landing/pricing/PricingSection";
 import ServiceNewSection from "@/components/landing/services/ServiceNewSection";
 import ServiceSection from "@/components/landing/services/ServiceSection";
 import ShowSection from "@/components/landing/show/ShowSection";
+import TestimonialNewSection from "@/components/landing/testimonial/TestimonialNewSection";
 import TestimonialSection from "@/components/landing/testimonial/TestimonialSection";
 import { Button } from "@/components/ui/button";
 
@@ -26,6 +27,8 @@ export default function Home() {
       <ServiceNewSection />
       <GallerySection />
       <ShowSection />
+      {/* <TestimonialSection /> */}
+      <TestimonialNewSection />
       <AboutSectionTwo />
       <AboutSectionOne />
       <FinalSection />
