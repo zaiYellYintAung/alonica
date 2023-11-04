@@ -8,7 +8,6 @@ import FinalSection from "@/components/landing/final/FinalSection";
 import GallerySection from "@/components/landing/gallery/GallerySection";
 import HeroSection from "@/components/landing/hero/HeroSection";
 import IntroSection from "@/components/landing/intro/IntroSection";
-import PricingSection from "@/components/landing/pricing/PricingSection";
 import ServiceNewSection from "@/components/landing/services/ServiceNewSection";
 import ServiceSection from "@/components/landing/services/ServiceSection";
 import ShowSection from "@/components/landing/show/ShowSection";
@@ -20,13 +19,12 @@ export default function Home() {
   return (
     <div className="space-y-16">
       <HeroSection />
-
-      <IntroSection />
+      <ShowSection />
+      {/* <IntroSection /> */}
       <FeatureSectionTwo />
       <AboutSectionThree />
-      <ServiceNewSection />
       <GallerySection />
-      <ShowSection />
+
       {/* <TestimonialSection /> */}
       <TestimonialNewSection />
       <AboutSectionTwo />

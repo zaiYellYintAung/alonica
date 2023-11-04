@@ -22,7 +22,7 @@ const arr = [
 const AboutSectionThree = () => {
   return (
     <div className="flex items-center py-0 md:py-20">
-      <div className="flex gap-8 lg:gap-12  py-8 flex-col lg:flex-row-reverse items-center">
+      <div className="flex gap-8 lg:gap-12 py-8 flex-col lg:flex-row-reverse items-center">
         <section className="w-full lg:w-auto space-y-5 mb-4 md:mb-8 lg:mb-0">
           <h1 className="text-3xl md:text-4xl font-bold md:leading-[3rem]">
             Customizable to your business
@@ -54,7 +54,7 @@ const AboutSectionThree = () => {
         </section>
         <section className="w-full lg:w-1/2">
           <div className="h-[400px] lg:h-[480px] w-full flex items-center justify-center ">
-            <div className="w-full lg:w-[450px] h-[450px] xl:w-[550px] xl:h-[550px] rounded-md bg-primary"></div>
+            <div className="h-[450px] w-full xl:w-[600px] md:w-[550px]  xl:h-[550px] rounded-md bg-primary"></div>
           </div>
         </section>
       </div>

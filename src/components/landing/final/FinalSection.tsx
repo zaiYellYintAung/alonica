@@ -3,7 +3,7 @@ import { Separator } from "@/components/ui/separator";
 
 const FinalSection = () => {
   return (
-    <div className="py-12 px-12 space-y-8 bg-secondary text-secondary-foreground rounded-2xl">
+    <div className="py-12 px-12 space-y-8 bg-zinc-950 text-white border rounded-2xl">
       <h1 className="text-4xl font-bold">Tell us about your project</h1>
       <Button size={"lg"} className="rounded-full">
         Say Hi

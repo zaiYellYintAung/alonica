@@ -5,22 +5,21 @@ import { testOneInput, testOneOutput } from "./constants";
 const GalleryCard = ({
   beforeImg,
   afterImg,
-  height,
 }: {
   beforeImg: any;
   afterImg: any;
-  height: string;
 }) => {
   return (
-    <div
-      className={`w-full h-[${height}] rounded-md border relative overflow-hidden cursor-pointer`}>
+    <>
+      /*{" "}
       <div className="w-full transition-opacity duration-500 absolute inset-0">
-        <Image src={beforeImg} alt="image" layout="fill" objectFit="cover" />
+        <Image src={beforeImg} alt={`image0`} layout="fill" objectFit="cover" />
       </div>
       <div className="w-full transition-opacity duration-500 absolute inset-0 opacity-0 hover:opacity-100">
-        <Image src={afterImg} alt="image" layout="fill" objectFit="cover" />
-      </div>
-    </div>
+        <Image src={afterImg} alt={`image0`} layout="fill" objectFit="cover" />
+      </div>{" "}
+      */
+    </>
   );
 };
 
@@ -41,55 +40,46 @@ const GallerySection = () => {
       </header>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full mx-auto gap-6">
         <div className="space-y-6">
-          <GalleryCard
-            beforeImg={testOneInput}
-            afterImg={testOneOutput}
-            height="250px"
-          />
-          <GalleryCard
-            beforeImg={testOneInput}
-            afterImg={testOneOutput}
-            height="280px"
-          />
-          <GalleryCard
-            beforeImg={testOneInput}
-            afterImg={testOneOutput}
-            height="300px"
-          />
+          <div
+            className={`w-full h-[250px] rounded-md border relative overflow-hidden cursor-pointer`}>
+            <GalleryCard beforeImg={testOneInput} afterImg={testOneOutput} />
+          </div>
+          <div
+            className={`w-full h-[250px] rounded-md border relative overflow-hidden cursor-pointer`}>
+            <GalleryCard beforeImg={testOneInput} afterImg={testOneOutput} />
+          </div>
+          <div
+            className={`w-full h-[300px] rounded-md border relative overflow-hidden cursor-pointer`}>
+            <GalleryCard beforeImg={testOneInput} afterImg={testOneOutput} />
+          </div>
         </div>
         <div className="space-y-6">
-          <GalleryCard
-            beforeImg={testOneInput}
-            afterImg={testOneOutput}
-            height="350px"
-          />
-          <GalleryCard
-            beforeImg={testOneInput}
-            afterImg={testOneOutput}
-            height="250px"
-          />
-          <GalleryCard
-            beforeImg={testOneInput}
-            afterImg={testOneOutput}
-            height="290px"
-          />
+          <div
+            className={`w-full h-[350px] rounded-md border relative overflow-hidden cursor-pointer`}>
+            <GalleryCard beforeImg={testOneInput} afterImg={testOneOutput} />
+          </div>
+          <div
+            className={`w-full h-[250px] rounded-md border relative overflow-hidden cursor-pointer`}>
+            <GalleryCard beforeImg={testOneInput} afterImg={testOneOutput} />
+          </div>
+          <div
+            className={`w-full h-[290px] rounded-md border relative overflow-hidden cursor-pointer`}>
+            <GalleryCard beforeImg={testOneInput} afterImg={testOneOutput} />
+          </div>
         </div>
         <div className="space-y-6">
-          <GalleryCard
-            beforeImg={testOneInput}
-            afterImg={testOneOutput}
-            height="280px"
-          />
-          <GalleryCard
-            beforeImg={testOneInput}
-            afterImg={testOneOutput}
-            height="260px"
-          />
-          <GalleryCard
-            beforeImg={testOneInput}
-            afterImg={testOneOutput}
-            height="280px"
-          />
+          <div
+            className={`w-full h-[280px] rounded-md border relative overflow-hidden cursor-pointer`}>
+            <GalleryCard beforeImg={testOneInput} afterImg={testOneOutput} />
+          </div>
+          <div
+            className={`w-full h-[260px] rounded-md border relative overflow-hidden cursor-pointer`}>
+            <GalleryCard beforeImg={testOneInput} afterImg={testOneOutput} />
+          </div>
+          <div
+            className={`w-full h-[280px] rounded-md border relative overflow-hidden cursor-pointer`}>
+            <GalleryCard beforeImg={testOneInput} afterImg={testOneOutput} />
+          </div>
         </div>
       </div>
     </div>
