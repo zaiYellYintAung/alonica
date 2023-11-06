@@ -11,7 +11,7 @@ import { CommandMenu } from "./CommandMenu";
 
 const MainNavbar = () => {
   return (
-    <nav className="sticky h-14 inset-x-0 top-0 z-30 w-full border-b border-border bg-background/75 backdrop-blur-lg transition-all">
+    <nav className="fixed h-14 inset-x-0 top-0 z-30 w-full border-b border-border bg-background/75 backdrop-blur-lg transition-all">
       <div>
         <div className="flex h-14 items-center justify-between border-b border-border px-4">
           <section>

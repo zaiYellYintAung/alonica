@@ -7,7 +7,7 @@ interface Props {
 
 const VisionaryBoard: FC<Props> = ({ loading, children }) => {
   return (
-    <div className="w-[680px] h-[680px] border rounded-lg p-4 flex-shrink-0 border-dashed flex justify-center items-center flex-col text-center">
+    <div className="lg:w-[600px] xl:w-[800px] h-full border rounded-lg p-4 flex-shrink-0 border-dashed flex justify-center items-center flex-col text-center">
       {loading ? <>Loading</> : <>{children}</>}
     </div>
   );

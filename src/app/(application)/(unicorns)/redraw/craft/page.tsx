@@ -3,25 +3,20 @@
 import UnicornBoard from "@/components/application/UnicornBoard";
 import VisionaryBoard from "@/components/application/VisionaryBoard";
 import { useState } from "react";
-import MagicForm from "../_components/forms/MagicForm";
+import RedrawForm from "../_components/forms/RedrawForm";
 import { Button } from "@/components/ui/button";
-import { MagicFormType } from "../_components/forms/constants";
 
-export default function NewGenerateDrawingPage() {
+export default function NewReDrawPage() {
   const [unicorn, setUnicorn] = useState<string[]>([]);
-  const [loading, setLoading] = useState(false);
-
-  const handleSubmit = (data: MagicFormType) => {};
-
+  const loading = false;
   return (
     <div className="flex gap-6">
       <section>
         {unicorn.length ? (
-          <main>
+          
             <UnicornBoard unicorns={unicorn} />
-          </main>
+          
         ) : (
-          <main>
             <VisionaryBoard loading={loading}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -45,12 +40,11 @@ export default function NewGenerateDrawingPage() {
               </p>
               <Button className="relative">Start Generating</Button>
             </VisionaryBoard>
-          </main>
         )}
       </section>
 
       <section>
-        <MagicForm handleSubmit={handleSubmit} loading={loading} />
+        <RedrawForm />
       </section>
     </div>
   );

@@ -6,12 +6,6 @@ export default async function RenderLayout({
 }: {
   children: ReactNode;
 }) {
-  return (
-    <>
-      <div className="flex gap-12 w-full">
-        <ViewBox />
-        <div className="w-full">{children}</div>
-      </div>
-    </>
-  );
+  return <>{children}</>;
+
 }
