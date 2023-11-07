@@ -25,7 +25,10 @@ const ViewBox: FC<Props> = () => {
     );
     setTitle(currentRouteDatas[0].viewTitle);
     setDatas(currentRouteDatas[0].data);
-  }, []);
+  }, [pathname]);
+
+  console.log("pathname ->", pathname);
+  console.log("rootPathname ->", rootPathname);
 
   return (
     <div className="hidden xl:block w-[220px] h-full rounded-md space-y-2 flex-shrink-0">
